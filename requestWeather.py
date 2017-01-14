@@ -25,7 +25,7 @@ Longitude = -73.935242
 """
 
 darksky_api_url = "https://api.darksky.net/forecast/"
-darksky_api_key = "8032c34c2c91c45fb951422b13d5159b"
+darksky_api_key = "[KEY]"
 
 class requestWeather(object):
 
@@ -69,7 +69,7 @@ class requestWeather(object):
                 print("Can't convert to float! ")
 
         # build the url
-        self.url = darksky_api_url + darksky_api_key + '/'
+        self.url = darksky_api_url + self.api_key + '/'
         self.url += str(self.lat) + ',' + str(self.longi)
         return self.url
 
@@ -87,7 +87,7 @@ class requestWeather(object):
                 try:
                     # try to send a request again
                     print('Sending again...')
-                    self.resq_data = requests.get("https://api.darksky.net/forecast/{0}/{1},{2}".format(self.darksky_api_key,self.Latitude,self.Longitude,timeout = 10.0))
+                    self.resq_data = requests.get("https://api.darksky.net/forecast/{0}/{1},{2}".format(self.api_key,self.Latitude,self.Longitude,timeout = 10.0))
                 except requests.exceptions.RequestException as e:
                     print("Error:",e)
                 except requests.exceptions.Timeout:
@@ -124,7 +124,7 @@ if __name__ == '__main__':
 
     La = 40.730610
     Lo = -73.935242
-    key = '8032c34c2c91c45fb951422b13d5159b'
+    key = '[KEY]'
 
     weather = requestWeather(key,La,Lo)
     print(weather.GetWeatherData())
