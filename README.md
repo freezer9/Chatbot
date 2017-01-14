@@ -1,5 +1,5 @@
-# Chatbot
-A Bot which  tries to converse with a user.
+# Weatherbot
+A Bot which  gets the weather of a place.
 
 # Still in development
 
