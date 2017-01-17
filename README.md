@@ -1,5 +1,5 @@
 # Weatherbot
-A Bot which  gets the weather of a place.
+A Bot which  tells you the current weather of a place
 
 # Still in development
 
